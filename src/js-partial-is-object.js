@@ -31,14 +31,14 @@
 
     // Browser
     } else {
-        root.js_partial_isString = factory();
+        root.js_partial_isObject = factory();
     }
 }(this, function() {
     'use strict';
 
     /**
      * Determines whether an object is a plain object.
-     * By default handles **null-prototype objects** as plain objects created via **Object.create(null)**.
+     * By default it handles **null-prototype objects** as plain objects created via **Object.create(null)**.
      *
      * @function isObject
      * @memberOf js.partial

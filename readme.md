@@ -10,7 +10,8 @@
 
 ## Synopsis
 
-A partial to check whether an **object is a plain object**.
+A partial to check whether **an object is a plain object**.
+By default it handles **null-prototype objects as plain objects** created via **Object.create(null)**.
 
 - Written in **UMD**
 
