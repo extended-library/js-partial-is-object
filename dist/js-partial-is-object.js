@@ -8,7 +8,7 @@
  * More information on [JavaScript Open Standards]{@link https://github.com/jsopenstd/jsopenstd}.
  *
  * @namespace js.partial
- * @version 0.0.1
+ * @version 0.0.2
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
  * @license [MIT]{@link https://github.com/jsopenstd/js-partial-foreach/blob/master/license.md}
@@ -31,14 +31,14 @@
 
     // Browser
     } else {
-        root.js_partial_isString = factory();
+        root.js_partial_isObject = factory();
     }
 }(this, function() {
     'use strict';
 
     /**
      * Determines whether an object is a plain object.
-     * By default handles **null-prototype objects** as plain objects created via **Object.create(null)**.
+     * By default it handles **null-prototype objects** as plain objects created via **Object.create(null)**.
      *
      * @function isObject
      * @memberOf js.partial
