@@ -8,7 +8,7 @@
  * More information on [JavaScript Open Standards]{@link https://github.com/jsopenstd/jsopenstd}.
  *
  * @namespace js.partial
- * @version 0.0.0
+ * @version 0.0.1
  *
  * @author Richard King <richrdkng@gmail.com> [GitHub]{@link https://github.com/richrdkng}
  * @license [MIT]{@link https://github.com/jsopenstd/js-partial-foreach/blob/master/license.md}
@@ -52,10 +52,11 @@
      * @returns {boolean} If the object is a plain object, it will return true.
      */
     return function isObject(object, handleNullPrototypeObjectAsPlainObject) {
+        var handleNullProtoObj = true;
 
-        var handleNullProtoObj = typeof handleNullPrototypeObjectAsPlainObject === 'boolean'
-                                     ? handleNullPrototypeObjectAsPlainObject
-                                     : true;
+        if (typeof handleNullPrototypeObjectAsPlainObject === 'boolean') {
+            handleNullProtoObj = handleNullPrototypeObjectAsPlainObject;
+        }
 
         if (object !== null) {
             if (Object.prototype.toString.call(object) === '[object Object]') {
